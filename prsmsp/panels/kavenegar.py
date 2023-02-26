@@ -1,6 +1,6 @@
 import requests
 
-from prsmsp.abctract.abcpanel import ABCSmsPanel
+from prsmsp.abctracts.abcpanel import ABCSmsPanel
 
 
 class KaveNegar(ABCSmsPanel):
