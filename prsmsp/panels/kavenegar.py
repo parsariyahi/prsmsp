@@ -1,7 +1,8 @@
+import json
+
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-
 
 class KaveNegar(ABCSmsPanel):
 
@@ -31,7 +32,7 @@ class KaveNegar(ABCSmsPanel):
                            they will give you this when you bought your service.
 
         Returns:
-            _type_: _description_
+            dict: the response that kavenegar will return.
         """
 
         url = f"https://api.kavenegar.com/v1/{api_key}/sms/send.json"
@@ -43,4 +44,6 @@ class KaveNegar(ABCSmsPanel):
 
         resp = requests.get(url, params=params)
 
-        return resp
+        #jsonify the real response of your kavenegar resp,
+        #for more info read the docs https://kavenegar.com/rest.html
+        return json.loads(resp.text) 
