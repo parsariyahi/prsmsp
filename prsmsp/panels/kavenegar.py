@@ -4,11 +4,8 @@ import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
 
-class KaveNegar(ABCSmsPanel):
 
-    #api_key = None
-    #receptor = None
-    #message = None
+class KaveNegar(ABCSmsPanel):
 
     def test_panel(self):
         """test the sms panel (connection, url, etc.)
@@ -33,6 +30,8 @@ class KaveNegar(ABCSmsPanel):
 
         Returns:
             dict: the response that kavenegar will return.
+
+        Http Request Type: GET
         """
 
         url = f"https://api.kavenegar.com/v1/{api_key}/sms/send.json"

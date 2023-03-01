@@ -30,21 +30,29 @@ class SmsIr(ABCSmsPanel):
 
         Returns:
             _type_: _description_
+
+        Http Request Type: POST
         """
+        receptors = []
+        messages = []
 
         headers = {
-            "ACCEPT": 'application/json',
             "X-API-KEY": api_key,
+            "ACCEPT": 'application/json',
+            'Content-Type': 'application/json',
         }
 
         url = "https://api.sms.ir/v1/send/likeToLike"
 
+        receptors.append(receptor)
+        messages.append(message)
+
         data = {
                 "LineNumber": line_number,
-                "MessageText": message,
-                "Mobiles": message,
+                "MessageTexts": messages,
+                "Mobiles": receptors,
             }
 
-        resp = requests.post(url, data=json.load(data), headers=headers)
+        resp = requests.post(url, headers=headers, json=data)
 
         return resp
