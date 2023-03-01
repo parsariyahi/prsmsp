@@ -46,4 +46,4 @@ class KaveNegar(ABCSmsPanel):
 
         #jsonify the real response of your kavenegar resp,
         #for more info read the docs https://kavenegar.com/rest.html
-        return json.loads(resp.text) 
+        return json.loads(resp.text)
