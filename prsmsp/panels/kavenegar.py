@@ -3,19 +3,16 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
+from prsmsp.models import Response
 
 
 class KaveNegar(ABCSmsPanel):
 
-    def test_panel(self):
-        """test the sms panel (connection, url, etc.)
-        in this case we used the getdate api from {kavenegar} smspanel.
-        """
+    def _response_parser(self, resp):
+        status_code = int(resp.status_code)
+        real_response = json.loads(resp.text)
 
-        url = "https://api.kavenegar.com/v1/0/utils/getdate.json"
-        resp = requests.get(url)
-
-        return resp
+        return Response(status_code, real_response)
 
     def send_sms(self, receptor: str, message: str, api_key: str):
         """send sms with kavenegar sms panel
@@ -43,6 +40,4 @@ class KaveNegar(ABCSmsPanel):
 
         resp = requests.get(url, params=params)
 
-        #jsonify the real response of your kavenegar resp,
-        #for more info read the docs https://kavenegar.com/rest.html
-        return json.loads(resp.text)
+        return self._response_parser(resp)

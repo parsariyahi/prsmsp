@@ -3,19 +3,16 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
+from prsmsp.models import Response
 
 
 class SmsIr(ABCSmsPanel):
 
-    def test_panel(self):
-        """test the sms panel (connection, url, etc.)
-        in this case we used the getdate api from {sms.ir} smspanel.
-        """
+    def _response_parser(self, resp):
+        status_code = int(resp.status_code)
+        real_response = json.loads(resp.text)
 
-        url = "https://api.sms.ir/v1/send/likeToLike"
-        resp = requests.post(url)
-
-        return resp
+        return Response(status_code, real_response)
 
     def send_sms(self, receptor: str, message: str, api_key: str, line_number: str):
         """send sms with sms.ir sms panel
@@ -55,4 +52,4 @@ class SmsIr(ABCSmsPanel):
 
         resp = requests.post(url, headers=headers, json=data)
 
-        return resp
+        return self._response_parser(resp)

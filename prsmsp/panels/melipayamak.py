@@ -3,18 +3,16 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
+from prsmsp.models import Response
 
 
 class MeliPayamak(ABCSmsPanel):
 
-    def test_panel(self):
-        """test the sms panel (connection, url, etc.)
-        """
+    def _response_parser(self, resp):
+        status_code = int(resp.status_code)
+        real_response = json.loads(resp.text)
 
-        url = "https://rest.payamak-panel.com/api/SendSMS/SendSMS"
-        resp = requests.get(url)
-
-        return resp
+        return Response(status_code, real_response)
 
     def send_sms(self, receptor: str, message: str, originator: str, username: str, password: str):
         """send sms with melipayamak sms panel
@@ -48,4 +46,4 @@ class MeliPayamak(ABCSmsPanel):
 
         resp = requests.post(url, json=data)
 
-        return resp
+        return self._response_parser(resp)

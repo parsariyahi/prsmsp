@@ -1,29 +1,19 @@
+import json
+
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-
+from prsmsp.models import Response
 # WSDL service
 
 
 class WebOneSms(ABCSmsPanel):
 
-    def test_panel(self, username, password, from_, to, text):
-        """test the sms panel (connection, url, etc.)
-        in this case we used the sendsms api from {webone-sms.ir} smspanel.
-        """
+    def _response_parser(self, resp):
+        status_code = int(resp.status_code)
+        real_response = json.loads(resp.text)
 
-        url = "http://webone-sms.ir/SMSInOutBox/sendsms"
-        params = {
-            "username": username,
-            "password": password,
-            "from": from_,
-            "to": to,
-            "text": text,
-        }
-
-        resp = requests.get(url, params=params)
-
-        return resp
+        return Response(status_code, real_response)
 
     def send_sms(self, receptor: str, message: str, username: str, password: str, line_number: str):
         """send sms with webone-sms.ir sms panel
@@ -52,4 +42,4 @@ class WebOneSms(ABCSmsPanel):
 
         resp = requests.get(url, params=params)
 
-        return resp
+        return self._response_parser(resp)
