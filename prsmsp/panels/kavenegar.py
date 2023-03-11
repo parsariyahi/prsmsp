@@ -3,9 +3,16 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
+from prsmsp.models.response import Response
 
 
 class KaveNegar(ABCSmsPanel):
+
+    def _response_parser(self, resp):
+        status_code = int(resp.status_code)
+        real_response = json.loads(resp.text)
+
+        return Response(status_code, real_response)
 
     def test_panel(self):
         """test the sms panel (connection, url, etc.)
@@ -43,6 +50,4 @@ class KaveNegar(ABCSmsPanel):
 
         resp = requests.get(url, params=params)
 
-        #jsonify the real response of your kavenegar resp,
-        #for more info read the docs https://kavenegar.com/rest.html
-        return json.loads(resp.text)
+        return self._response_parser(resp)
