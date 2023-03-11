@@ -7,16 +7,6 @@ from prsmsp.abctracts.abcpanel import ABCSmsPanel
 
 class KaveNegar(ABCSmsPanel):
 
-    def test_panel(self):
-        """test the sms panel (connection, url, etc.)
-        in this case we used the getdate api from {kavenegar} smspanel.
-        """
-
-        url = "https://api.kavenegar.com/v1/0/utils/getdate.json"
-        resp = requests.get(url)
-
-        return resp
-
     def send_sms(self, receptor: str, message: str, api_key: str):
         """send sms with kavenegar sms panel
 

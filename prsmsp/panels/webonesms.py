@@ -7,24 +7,6 @@ from prsmsp.abctracts.abcpanel import ABCSmsPanel
 
 class WebOneSms(ABCSmsPanel):
 
-    def test_panel(self, username, password, from_, to, text):
-        """test the sms panel (connection, url, etc.)
-        in this case we used the sendsms api from {webone-sms.ir} smspanel.
-        """
-
-        url = "http://webone-sms.ir/SMSInOutBox/sendsms"
-        params = {
-            "username": username,
-            "password": password,
-            "from": from_,
-            "to": to,
-            "text": text,
-        }
-
-        resp = requests.get(url, params=params)
-
-        return resp
-
     def send_sms(self, receptor: str, message: str, username: str, password: str, line_number: str):
         """send sms with webone-sms.ir sms panel
 
