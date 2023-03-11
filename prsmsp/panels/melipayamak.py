@@ -7,15 +7,6 @@ from prsmsp.abctracts.abcpanel import ABCSmsPanel
 
 class MeliPayamak(ABCSmsPanel):
 
-    def test_panel(self):
-        """test the sms panel (connection, url, etc.)
-        """
-
-        url = "https://rest.payamak-panel.com/api/SendSMS/SendSMS"
-        resp = requests.get(url)
-
-        return resp
-
     def send_sms(self, receptor: str, message: str, originator: str, username: str, password: str):
         """send sms with melipayamak sms panel
 
