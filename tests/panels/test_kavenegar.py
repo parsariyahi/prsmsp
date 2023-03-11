@@ -1,11 +1,11 @@
 import json
 import unittest
 
-from prsmsp.panels.kavenegar import KaveNegar
-from prsmsp.models.response import Response
+from prsmsp.panels import KaveNegar
+from prsmsp.models import Response
 
 
-class TestRespnoseModel(unittest.TestCase):
+class TestKaveNegarPanel(unittest.TestCase):
 
     def test_send_sms(self):
         with open('./config.json') as file:
