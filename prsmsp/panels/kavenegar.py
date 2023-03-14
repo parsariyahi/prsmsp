@@ -3,10 +3,13 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-from prsmsp.models import Response
+from prsmsp.models import Response, Auth
 
 
 class KaveNegar(ABCSmsPanel):
+
+    def __init__(self, token):
+        self.auth = Auth('token', token=token)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)

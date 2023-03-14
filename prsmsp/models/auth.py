@@ -1,4 +1,4 @@
-class TokenAuth:
+class APIKeyAuth:
     
     def __init__(
         self,
@@ -40,8 +40,7 @@ class Auth :
 
         raise ValueError
         
-
-    def get_auth(self):
+    def get_auth_info(self):
         if isinstance(self.auth, (TokenAuth, UPAuth)) :
             return self.auth
 
