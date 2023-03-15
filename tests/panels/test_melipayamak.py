@@ -11,8 +11,8 @@ class TestMeliPayamakPanel(unittest.TestCase):
         with open('./config.json') as file:
             melipayamak_configs = json.load(file)["melipayamak"]
             fake_success_response = Response(200, dict())
-            panel = MeliPayamak()
-            panel_resp = panel.send_sms('09393535526', 'some', melipayamak_configs["originator"], melipayamak_configs["username"], melipayamak_configs["password"])
+            panel = MeliPayamak(melipayamak_configs["username"], melipayamak_configs["password"])
+            panel_resp = panel.send_sms('09393535526', 'some', melipayamak_configs["originator"])
             self.assertEqual(fake_success_response, panel_resp)
 
 
