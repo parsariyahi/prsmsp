@@ -18,7 +18,7 @@ class KaveNegar(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, api_key: str):
+    def send_sms(self, receptor: str, message: str):
         """send sms with kavenegar sms panel
 
         Args:
@@ -35,7 +35,7 @@ class KaveNegar(ABCSmsPanel):
         Http Request Type: GET
         """
 
-        url = f"https://api.kavenegar.com/v1/{api_key}/sms/send.json"
+        url = f"https://api.kavenegar.com/v1/{self.auth.api_key}/sms/send.json"
 
         params = {
                 "receptor": receptor,
