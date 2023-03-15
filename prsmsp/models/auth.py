@@ -2,46 +2,35 @@ class APIKeyAuth:
     
     def __init__(
         self,
-        token
+        key
     ) -> None:
-        self.token = token
+        self.key = key
 
 class PassAuth:
     
     def __init__(
         self,
         username,
-        password
+        password,
     ) -> None:
         self.username = username
         self.password = password
 
-class Auth :
+class AuthFactory:
 
-    def __init__(
-        self,
-        auth_type,
-        **auth_info,
-    ) -> None:
-        if auth_type == 'token':
-            token = auth_info.get('token', '')
-            if not token:
-                raise ValueError
-            self.auth = TokenAuth(token)
-            return None
+    @staticmethod
+    def get(auth_type):
+        auth_types = {
+            'api_key': APIKeyAuth,
+            'pass': PassAuth,
+        }
 
-        elif auth_type == 'pass':
-            username = auth_info.get('username', '')
-            password = auth_info.get('password', '')
-            if not username and not password :
-                raise ValueError
-            self.auth = PassAuth(username, password)
-            return None
+        Auth = auth_types.get(auth_type, None)
 
-        raise ValueError
-        
-    def get_auth_info(self):
-        if isinstance(self.auth, (TokenAuth, UPAuth)) :
-            return self.auth
+        if Auth is None: # if the auth method is not supported
+            raise ValueError
 
-        return None
+        # this will not initiate the object, its just returning.
+        # if you write like Auth() it will be initiated.
+        # this will avoid the Input Error Execption.
+        return Auth
