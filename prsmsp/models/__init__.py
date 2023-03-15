@@ -1,2 +1,2 @@
 from prsmsp.models.response import Response
-from prsmsp.models.auth import Auth
+from prsmsp.models.auth import AuthFactory

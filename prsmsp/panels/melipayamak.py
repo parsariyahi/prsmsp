@@ -3,10 +3,13 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-from prsmsp.models import Response
+from prsmsp.models import Response, AuthFactory
 
 
 class MeliPayamak(ABCSmsPanel):
+
+    def __init__(self, api_key):
+        self.auth = AuthFactory.get('api_key')(api_key)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)

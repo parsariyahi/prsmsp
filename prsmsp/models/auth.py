@@ -2,11 +2,11 @@ class APIKeyAuth:
     
     def __init__(
         self,
-        key
+        api_key,
     ) -> None:
-        self.key = key
+        self.api_key = api_key
 
-class PassAuth:
+class UnamePassAuth:
     
     def __init__(
         self,
@@ -22,7 +22,7 @@ class AuthFactory:
     def get(auth_type):
         auth_types = {
             'api_key': APIKeyAuth,
-            'pass': PassAuth,
+            'username_pass': UnamePassAuth,
         }
 
         Auth = auth_types.get(auth_type, None)

@@ -3,11 +3,13 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-from prsmsp.models import Response
-# WSDL service
+from prsmsp.models import Response, AuthFactory
 
 
 class WebOneSms(ABCSmsPanel):
+
+    def __init__(self, username, password):
+        self.auth = AuthFactory.get('username_pass')(username, password)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)
