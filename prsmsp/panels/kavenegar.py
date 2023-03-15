@@ -3,7 +3,8 @@ import json
 import requests
 
 from prsmsp.abctracts.abcpanel import ABCSmsPanel
-from prsmsp.models import Response, AuthFactory
+from prsmsp.factories import AuthFactory
+from prsmsp.models import Response
 
 
 class KaveNegar(ABCSmsPanel):
