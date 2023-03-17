@@ -1,12 +1,13 @@
 ## Supported panels
 
 * [Kavenegar](http://kavenegar.com)
-	- [x] real working test
-* [Web one](http://webone-sms.ir)
-  - [x] real working test
+    - [x] real working test
 * [Sms ir](http://sms.ir)
-  - [ ] real working test
-
+    - [X] real working test
+* [Web one](http://webone-sms.ir)
+    - [x] real working test
+* [Meli Payamak](https://www.melipayamak.com)
+    - [x] real working test
 
 ## Why use this package?
 
@@ -21,11 +22,14 @@ This block of code is for kavenegar sms panel.
 Each of sms panels has its own parameters. Please read their docs first.
 
 ```python
-from prsmsp.panels.kavenegar import KaveNegar
+from prsmsp.panels import KaveNegar
 
-panel = Kavenegar()
+api_key = "your api key"
+panel = Kavenegar(api_key) # auth
 
-panel.send_sms(receptor, msg, api_key)
+receptor = "your receptor"
+msg = "your message"
+panel.send_sms(receptor, msg)
 ```
 
 
