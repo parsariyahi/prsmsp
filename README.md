@@ -7,7 +7,7 @@
 * [Web one](http://webone-sms.ir)
     - [x] real working test
 * [Meli Payamak](https://www.melipayamak.com)
-    - [x] real working test
+    - [ ] real working test
 
 ## Why use this package?
 
