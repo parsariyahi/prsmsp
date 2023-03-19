@@ -1,4 +1,4 @@
-""" __Import All Panels Here__ """
+""" __Import All Panel Classes Here__ """
 from .panels import KaveNegar as KaveNegar
 from .panels import SmsIr as SmsIr
 from .panels import WebOneSms as WebOneSms
