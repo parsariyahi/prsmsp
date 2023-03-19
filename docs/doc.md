@@ -81,5 +81,6 @@ the **```data```** depends on your sms panel, for more info read the docs of you
 >print(rsep.status_code) # returns http status code of your request
 >print(resp.real_resp) # returns the exact response that your sms panel sent
 >```
-the **```resp.status_code```** is HTTP status code for your request
-the **```resp.real_resp```** is the response that your sms panel sent to us
+the **```resp.status_code```** is HTTP status code for your request.
+
+the **```resp.real_resp```** is the response that your sms panel sent to us.
