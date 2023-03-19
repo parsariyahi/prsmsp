@@ -26,9 +26,8 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-# Requirements: This is done differently by poetry!
 dependencies = [
-    "requests>=2.0",
+    "requests>=2.20",
     "suds>=1.0",
 ]
 
