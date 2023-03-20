@@ -10,6 +10,17 @@ from prsmsp.models import Response
 class WebOneSms(ABCSmsPanel):
 
     def __init__(self, username, password):
+        """Take the auth info
+
+        :param username: webonesms username
+        :type username: str
+
+        :param password: webonesms password
+        :type password: str
+
+        :rtype None
+        :return: None
+        """
         self.auth = AuthFactory.get('username_pass')(username, password)
 
     def _response_parser(self, resp):
@@ -23,25 +34,27 @@ class WebOneSms(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, line_number: str):
+    def send_sms(self, receptor: str, message: str, originator: str):
         """send sms with webone-sms.ir sms panel
 
-        Args:
-            receptor (str): the reciver of your sms.
-            message (str): your message.
-            line_number (str): your line number that webone gave it to you.
+        :param receptor: reciver of your message
+        :type receptor: str
 
-        Returns:
-            _type_: _description_
+        :param message: the message you want to send
+        :type message: str
 
-        Http Request Type: GET
+        :param originator: the originator that you want to send your message
+        :type originator: str
+
+        :rtype Response
+        :return: The requests response
         """
 
         url = "http://webone-sms.ir/SMSInOutBox/sendsms"
         params = {
             "username": self.auth.username,
             "password": self.auth.password,
-            "from": line_number,
+            "from": originator,
             "to": receptor,
             "text": message,
         }

@@ -9,7 +9,15 @@ from prsmsp.models import Response
 
 class KaveNegar(ABCSmsPanel):
 
-    def __init__(self, api_key):
+    def __init__(self, api_key: str) -> None:
+        """Take the auth info
+
+        :param api_key: your kavenegar api key auth
+        :type api_key: str
+
+        :rtype None
+        :return: None
+        """
         self.auth = AuthFactory.get('api_key')(api_key)
 
     def _response_parser(self, resp):
@@ -18,21 +26,17 @@ class KaveNegar(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str):
+    def send_sms(self, receptor: str, message: str) -> Response:
         """send sms with kavenegar sms panel
 
-        Args:
-            receptor (str): the reciver of your sms,
-                            if there is many seperate them with comma (,)
-                            like: 09xxx,09xxx,09xxx.
-            message (str): your message.
-            api_key (str): this is the way that kavenegar authenticate you,
-                           they will give you this when you bought your service.
+        :param receptor: reciver of your message
+        :type receptor: str
 
-        Returns:
-            dict: the response that kavenegar will return.
+        :param message: the message you want to send
+        :type message: str
 
-        Http Request Type: GET
+        :rtype Response
+        :return: The requests response
         """
 
         url = f"https://api.kavenegar.com/v1/{self.auth.api_key}/sms/send.json"

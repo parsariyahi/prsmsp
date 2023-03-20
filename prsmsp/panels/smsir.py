@@ -9,7 +9,15 @@ from prsmsp.models import Response
 
 class SmsIr(ABCSmsPanel):
 
-    def __init__(self, api_key):
+    def __init__(self, api_key: str):
+        """Take the auth info
+
+        :param api_key: your smsir api key auth
+        :type api_key: str
+
+        :rtype None
+        :return: None
+        """
         self.auth = AuthFactory.get('api_key')(api_key)
 
     def _response_parser(self, resp):
@@ -18,19 +26,20 @@ class SmsIr(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, line_number: str):
-        """send sms with sms.ir sms panel
+    def send_sms(self, receptor: str, message: str, originator: str) -> Response:
+        """send sms with smsir sms panel
 
-        Args:
-            receptor (str): the reciver of your sms,
-                            if there is many seperate them with comma (,)
-                            like: 09xxx,09xxx,09xxx.
-            message (str): your message.
+        :param receptor: reciver of your message
+        :type receptor: str
 
-        Returns:
-            _type_: _description_
+        :param message: the message you want to send
+        :type message: str
 
-        Http Request Type: POST
+        :param originator: the originator that you want to send your message
+        :type originator: str
+
+        :rtype Response
+        :return: The requests response
         """
         receptors = []
         messages = []
@@ -47,7 +56,7 @@ class SmsIr(ABCSmsPanel):
         messages.append(message)
 
         data = {
-                "LineNumber": line_number,
+                "LineNumber": originator,
                 "MessageTexts": messages,
                 "Mobiles": receptors,
             }
