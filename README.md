@@ -27,10 +27,10 @@ This block of code is for **kavenegar** sms panel.
 Each of sms panels has its own parameters. Please read their docs first.
 
 ```python
-from prsmsp.panels import KaveNegar
+from prsmsp.panels import Kavenegar
 
 api_key = "your api key"
-panel = Kavenegar(api_key) # auth
+panel = Kavenegar(api_key)  # auth
 
 receptor = "your receptor"
 msg = "your message"

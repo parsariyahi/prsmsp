@@ -23,9 +23,9 @@ pip install prsmsp
 
 #### **Example**
 
->Import The Class
+> Import The Class
 >```python
->from prsmsp.panels import KaveNegar
+>from prsmsp.panels import Kavenegar
 >```
 
 >Import The Module
