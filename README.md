@@ -17,6 +17,11 @@
 
 ## How to use
 
+First lets install the package
+```shell
+pip install prsmsp
+```
+
 This block of code is for **kavenegar** sms panel.
 
 Each of sms panels has its own parameters. Please read their docs first.
@@ -31,7 +36,7 @@ receptor = "your receptor"
 msg = "your message"
 panel.send_sms(receptor, msg)
 ```
-### Read [Docs](./docs/doc.md)
+### Read [Docs](https://github.com/parsariyahi/prsmsp/blob/master/docs/doc.md)
 
 
 ## How to support this project
