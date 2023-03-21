@@ -7,7 +7,7 @@ from prsmsp.factories import AuthFactory
 from prsmsp.models import Response
 
 
-class KaveNegar(ABCSmsPanel):
+class Kavenegar(ABCSmsPanel):
 
     def __init__(self, api_key: str) -> None:
         """Take the auth info

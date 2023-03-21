@@ -1,10 +1,11 @@
 smsir sms panel
 
 usage
-```python
-from prsmsp.panels.smsir import SmsIr
 
-panel = SmsIr()
+```python
+from prsmsp.panels.smsdotir import SmsDotIr
+
+panel = SmsDotIr()
 
 """
 receptor -> is the reciver of your message, recpetor: str

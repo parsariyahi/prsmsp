@@ -1,17 +1,17 @@
 import json
 import unittest
 
-from prsmsp.panels import SmsIr
+from prsmsp.panels import SmsDotIr
 from prsmsp.models import Response
 
 
-class TestSmsIrPanel(unittest.TestCase):
+class TestSmsDotIrPanel(unittest.TestCase):
 
     def test_send_sms(self):
         with open('./config.json') as file:
             smsir_configs = json.load(file)["smsir"]
             fake_success_response = Response(200, dict())
-            panel = SmsIr(smsir_configs["api_key"])
+            panel = SmsDotIr(smsir_configs["api_key"])
             panel_resp = panel.send_sms('09393535526', 'some', smsir_configs["originator"])
             self.assertEqual(fake_success_response, panel_resp)
 

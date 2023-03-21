@@ -1,10 +1,11 @@
 kavenegar sms panel
 
 usage
-```python
-from prsmsp.panels.kavenegar import KaveNegar
 
-panel = KaveNegar()
+```python
+from prsmsp.panels import Kavenegar
+
+panel = Kavenegar()
 
 """
 receptor -> is the reciver of your message, recpetor: str

@@ -7,7 +7,7 @@ from prsmsp.factories import AuthFactory
 from prsmsp.models import Response
 
 
-class SmsIr(ABCSmsPanel):
+class SmsDotIr(ABCSmsPanel):
 
     def __init__(self, api_key: str):
         """Take the auth info
