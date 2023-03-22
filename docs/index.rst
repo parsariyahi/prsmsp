@@ -7,11 +7,10 @@ Welcome to prsmsp's documentation!
 ==================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-intro
-source
+    :maxdepth: 2
+    :caption: Contents:
+    intro
+    source
 
 
 Indices and tables
