@@ -1,11 +1,22 @@
-class AuthTypeError(Exception) :
+class AuthTypeError(Exception):
+    """AuthTypeError."""
+
     pass
 
-class AuthInfoError(Exception) :
+
+class AuthInfoError(Exception):
+    """AuthInfoError."""
+
     pass
 
-class StatusCodeUnvalid(Exception) :
+
+class StatusCodeUnvalid(Exception):
+    """StatusCodeUnvalid."""
+
     pass
 
-class ResponseError(Exception) :
+
+class ResponseError(Exception):
+    """ResponseError."""
+
     pass
