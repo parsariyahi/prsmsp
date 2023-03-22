@@ -10,7 +10,7 @@ Welcome to prsmsp's documentation!
    :hidden:
    :caption: Contents
 
-   /index
+   /intro
 
 
 Indices and tables
