@@ -2,7 +2,7 @@ import abc
 
 
 class ABCSmsPanel(abc.ABC):
-    """ABCSmsPanel. """
+    """ABCSmsPanel."""
 
     @abc.abstractmethod
     def _response_parser(self):

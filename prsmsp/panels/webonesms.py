@@ -8,7 +8,6 @@ from prsmsp.models import Response
 
 
 class WebOneSms(ABCSmsPanel):
-
     def __init__(self, username, password):
         """Take the auth info
 
@@ -21,7 +20,7 @@ class WebOneSms(ABCSmsPanel):
         :rtype None
         :return: None
         """
-        self.auth = AuthFactory.get('username_pass')(username, password)
+        self.auth = AuthFactory.get("username_pass")(username, password)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)
@@ -30,7 +29,7 @@ class WebOneSms(ABCSmsPanel):
         except json.JSONDecodeError:
             # if the json coder couldn't decode,
             # we just put it like what is is
-            real_response = {'resp': resp.text}
+            real_response = {"resp": resp.text}
 
         return Response(status_code, real_response)
 

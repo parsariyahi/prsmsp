@@ -8,7 +8,6 @@ from prsmsp.models import Response
 
 
 class SmsDotIr(ABCSmsPanel):
-
     def __init__(self, api_key: str):
         """Take the auth info
 
@@ -18,7 +17,7 @@ class SmsDotIr(ABCSmsPanel):
         :rtype None
         :return: None
         """
-        self.auth = AuthFactory.get('api_key')(api_key)
+        self.auth = AuthFactory.get("api_key")(api_key)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)
@@ -26,7 +25,7 @@ class SmsDotIr(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, originator: str) -> Response:
+    def send_sms(self, receptor: str, message: str, originator: str) -> Response: # NoQA
         """send sms with smsir sms panel
 
         :param receptor: reciver of your message
@@ -46,8 +45,8 @@ class SmsDotIr(ABCSmsPanel):
 
         headers = {
             "X-API-KEY": self.auth.api_key,
-            "ACCEPT": 'application/json',
-            'Content-Type': 'application/json',
+            "ACCEPT": "application/json",
+            "Content-Type": "application/json",
         }
 
         url = "https://api.sms.ir/v1/send/likeToLike"
@@ -56,10 +55,10 @@ class SmsDotIr(ABCSmsPanel):
         messages.append(message)
 
         data = {
-                "LineNumber": originator,
-                "MessageTexts": messages,
-                "Mobiles": receptors,
-            }
+            "LineNumber": originator,
+            "MessageTexts": messages,
+            "Mobiles": receptors,
+        }
 
         resp = requests.post(url, headers=headers, json=data)
 

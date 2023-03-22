@@ -8,7 +8,6 @@ from prsmsp.models import Response
 
 
 class Kavenegar(ABCSmsPanel):
-
     def __init__(self, api_key: str) -> None:
         """Take the auth info
 
@@ -18,7 +17,7 @@ class Kavenegar(ABCSmsPanel):
         :rtype None
         :return: None
         """
-        self.auth = AuthFactory.get('api_key')(api_key)
+        self.auth = AuthFactory.get("api_key")(api_key)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)
@@ -42,9 +41,9 @@ class Kavenegar(ABCSmsPanel):
         url = f"https://api.kavenegar.com/v1/{self.auth.api_key}/sms/send.json"
 
         params = {
-                "receptor": receptor,
-                "message": message,
-            }
+            "receptor": receptor,
+            "message": message,
+        }
 
         resp = requests.get(url, params=params)
 
