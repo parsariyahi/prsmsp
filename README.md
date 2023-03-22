@@ -36,7 +36,7 @@ receptor = "your receptor"
 msg = "your message"
 panel.send_sms(receptor, msg)
 ```
-### Read [Docs](https://github.com/parsariyahi/prsmsp/blob/master/docs/doc.md)
+### Read [Docs](https://prsmsp.readthedocs.io/)
 
 
 ## How to support this project
