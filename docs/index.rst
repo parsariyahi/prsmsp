@@ -10,6 +10,8 @@ Welcome to prsmsp's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+intro
+source
 
 
 Indices and tables
