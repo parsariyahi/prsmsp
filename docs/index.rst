@@ -12,9 +12,26 @@ Welcome to prsmsp's documentation!
 
    /intro
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Source
 
-Indices and tables
-==================
+   /source/prsmsp
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Panels
+
+   /panels/panels
+   /panels/kavenegar
+   /panels/smsdotir
+   /panels/webonesms
+   /panels/melipayamak
+
+Indices and table
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
