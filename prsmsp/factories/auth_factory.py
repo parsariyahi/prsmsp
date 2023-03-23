@@ -12,8 +12,8 @@ class AuthFactory:
         :type auth_type: str
         """
         auth_types = {
-            'api_key': APIKeyAuth,
-            'username_pass': UnamePassAuth,
+            "api_key": APIKeyAuth,
+            "username_pass": UnamePassAuth,
         }
 
         Auth = auth_types.get(auth_type, None)

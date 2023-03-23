@@ -8,7 +8,6 @@ from prsmsp.models import Response
 
 
 class MeliPayamak(ABCSmsPanel):
-
     def __init__(self, username, password):
         """Take the auth info
 
@@ -21,7 +20,7 @@ class MeliPayamak(ABCSmsPanel):
         :rtype None
         :return: None
         """
-        self.auth = AuthFactory.get('username_pass')(username, password)
+        self.auth = AuthFactory.get("username_pass")(username, password)
 
     def _response_parser(self, resp):
         status_code = int(resp.status_code)
@@ -48,13 +47,13 @@ class MeliPayamak(ABCSmsPanel):
         url = "https://rest.payamak-panel.com/api/SendSMS/SendSMS"
 
         data = {
-                "to": receptor,
-                "from": originator,
-                "text": message,
-                "isFlash": False,
-                "username": self.auth.username,
-                "password": self.auth.password,
-            }
+            "to": receptor,
+            "from": originator,
+            "text": message,
+            "isFlash": False,
+            "username": self.auth.username,
+            "password": self.auth.password,
+        }
 
         resp = requests.post(url, json=data)
 

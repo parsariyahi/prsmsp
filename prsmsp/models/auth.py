@@ -1,5 +1,4 @@
 class APIKeyAuth:
-
     def __init__(
         self,
         api_key,
@@ -8,7 +7,6 @@ class APIKeyAuth:
 
 
 class UnamePassAuth:
-
     def __init__(
         self,
         username,
