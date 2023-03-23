@@ -1,13 +1,9 @@
 ## Supported panels
 
 * [Kavenegar](http://kavenegar.com)
-    - [x] real working test
 * [Sms ir](http://sms.ir)
-    - [X] real working test
 * [Web one](http://webone-sms.ir)
-    - [x] real working test
 * [Meli Payamak](https://www.melipayamak.com)
-    - [x] real working test
 
 ## Why use this package?
 
