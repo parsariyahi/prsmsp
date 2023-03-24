@@ -12,6 +12,7 @@ Supported Panels
 * sms.ir
 * webonesms
 * melipayamak
+* mediana
 
 
 Kavenegar
@@ -30,3 +31,6 @@ Melipayamak
 ---------
 :doc:`Melipayamak Document </panels/melipayamak>`
 
+Mediana
+---------
+:doc:`Mediana Document </panels/mediana>`
