@@ -6,6 +6,10 @@
         "api_key": "your api key for test",
         "originator": "your originator for test"
     },
+    "mediana": {
+        "api_key": "your api key for test",
+        "originator": "your originator for test"
+    },
     "webonesms": {
         "username": "your username for test",
         "password": "your password for test",

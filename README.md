@@ -4,6 +4,7 @@
 * [Sms ir](http://sms.ir)
 * [Web one](http://webone-sms.ir)
 * [Meli Payamak](https://www.melipayamak.com)
+* [Mediana](https://mediana.ir)
 
 ## Why use this package?
 
