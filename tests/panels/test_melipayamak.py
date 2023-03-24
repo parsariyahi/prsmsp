@@ -12,7 +12,7 @@ class TestMeliPayamakPanel(unittest.TestCase):
             melipayamak_configs = json.load(file)["melipayamak"]
             fake_success_response = Response(200, dict())
             panel = MeliPayamak(melipayamak_configs["username"], melipayamak_configs["password"])
-            panel_resp = panel.send_sms('09393535526', 'some', melipayamak_configs["originator"])
+            panel_resp = panel.send_sms('09909090900', 'some', melipayamak_configs["originator"])
             self.assertEqual(fake_success_response, panel_resp)
 
 

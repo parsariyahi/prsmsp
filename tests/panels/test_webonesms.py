@@ -12,7 +12,7 @@ class TestWebOneSmsPanel(unittest.TestCase):
             webonesms_configs = json.load(file)["webonesms"]
             fake_success_response = Response(200, dict())
             panel = WebOneSms(webonesms_configs["username"], webonesms_configs["password"])
-            panel_resp = panel.send_sms('09393535526', 'some', webonesms_configs["originator"])
+            panel_resp = panel.send_sms('09909090900', 'some', webonesms_configs["originator"])
             self.assertEqual(fake_success_response, panel_resp)
 
 

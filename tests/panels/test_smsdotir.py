@@ -12,7 +12,7 @@ class TestSmsDotIrPanel(unittest.TestCase):
             smsir_configs = json.load(file)["smsir"]
             fake_success_response = Response(200, dict())
             panel = SmsDotIr(smsir_configs["api_key"])
-            panel_resp = panel.send_sms('09393535526', 'some', smsir_configs["originator"])
+            panel_resp = panel.send_sms('09909090900', 'some', smsir_configs["originator"])
             self.assertEqual(fake_success_response, panel_resp)
 
 

@@ -12,7 +12,7 @@ class TestKaveNegarPanel(unittest.TestCase):
             kavenegar_configs = json.load(file)["kavenegar"]
             fake_success_response = Response(200, dict())
             panel = Kavenegar(kavenegar_configs["api_key"])
-            panel_resp = panel.send_sms('09393535526', 'some')
+            panel_resp = panel.send_sms('09909090900', 'some')
             self.assertEqual(fake_success_response, panel_resp)
 
 
