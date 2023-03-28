@@ -1,6 +1,6 @@
 ---
-name: 'New Panel: <YOUR_PANEL_NAME>'
-about: Add new panel
+name: New Panel
+about: 'New Panel: <YOUR_PANEL_NAME>'
 title: add panel
 labels: feature, panels
 assignees: ''
