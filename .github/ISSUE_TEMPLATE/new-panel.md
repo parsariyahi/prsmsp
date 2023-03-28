@@ -8,9 +8,9 @@ assignees: ''
 ---
 
 ## First Checks
-- [ ] this panel is not already implemented.
-- [ ] this panel support API services (REST, SOAP, etc.)
-- [ ] this panel has documents for API calls.
+- [ ] This issue is not already opened.
+- [ ] This panel support API services (REST, SOAP, etc.)
+- [ ] This panel has documents for API calls.
 
 ## Official Website
 [website](WEBSITE_LINK)
@@ -20,9 +20,9 @@ assignees: ''
 * SOAP ➜  [document page](DOCUMENT_PAGE_LINK)
 * OTHER ➜  [document page](DOCUMENT_PAGE_LINK)
 
-## GitHub Organization
+## GitHub Organization Or GitHub Account
 [github organization](GITHUB_ORG_LINK)
 
 ## Extra Links
-[TITLE](TITLE_LINK)
-...
+* YOUR_TITLE ➜ [TITLE](TITLE_LINK)
+* ...
