@@ -19,5 +19,9 @@
         "username": "your username for test",
         "password": "your password for test",
         "originator": "your originator for test"
+    },
+    "ghasedaksms": {
+        "api_key": "your api key for test",
+        "originator": "your originator for test"
     }
 }

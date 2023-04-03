@@ -28,6 +28,7 @@
    /panels/webonesms
    /panels/melipayamak
    /panels/mediana
+   /panels/ghasedaksms
 
 
 What is prsmsp ?
