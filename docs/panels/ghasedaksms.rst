@@ -8,7 +8,7 @@ Send Sms
 sending sms with ghasedak sms
 
 .. code-block:: python
-   :caption: send sms with Kavenegar
+   :caption: send sms with Ghasedak Sms
    
    from prsmsp.panels import GasedakSms
    

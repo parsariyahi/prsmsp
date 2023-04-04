@@ -8,7 +8,7 @@ Send Sms
 sending sms with Webonesms
 
 .. code-block:: python
-   :caption: send sms with Kavenegar
+   :caption: send sms with Webonesms
    
    from prsmsp.panels import WebOneSms
    

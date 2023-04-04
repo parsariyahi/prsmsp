@@ -1,16 +1,16 @@
 Melipayamak
-=========
+===========
 
 Melipayamak is a famous sms provider. it used in wide range of companies and has good features.
 `Their Site <https://www.melipayamak.com/>`_.
 
 Send Sms
 ********
-sending sms with kavenegar
+sending sms with MeliPayamak
 
 .. code-block:: python
-   :caption: send sms with Kavenegar
-   
+   :caption: send sms with MeliPayamak
+
    from prsmsp.panels import MeliPayamak
    
    username = "your username"

@@ -8,7 +8,7 @@ Send Sms
 sending sms with sms.ir
 
 .. code-block:: python
-   :caption: send sms with Kavenegar
+   :caption: send sms with Sms.ir
    
    from prsmsp.panels import SmsDotIr
    
