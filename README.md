@@ -1,10 +1,11 @@
 ## Supported panels
 
 * [Kavenegar](http://kavenegar.com)
-* [Sms ir](http://sms.ir)
+* [Sms.ir](http://sms.ir)
 * [Web one](http://webone-sms.ir)
 * [Meli Payamak](https://www.melipayamak.com)
 * [Mediana](https://mediana.ir)
+* [Ghasedak Sms](https://ghasedak.me)
 
 ## Why use this package?
 
