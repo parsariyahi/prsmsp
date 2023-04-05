@@ -8,7 +8,6 @@ from prsmsp.models import Response
 
 
 class GhasedakSms(ABCSmsPanel):
-
     def __init__(self, api_key: str) -> None:
         """Take the auth info
 
@@ -51,9 +50,10 @@ class GhasedakSms(ABCSmsPanel):
         }
 
         headers = {
-            'content-type': "application/x-www-form-urlencoded",
-            'apikey': self.auth.api_key,
-            'cache-control': "no-cache",
+            "Accept": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "charset": "utf-8",
+            "apikey": self.auth.api_key,
         }
 
         resp = requests.post(url, data=data, headers=headers)
