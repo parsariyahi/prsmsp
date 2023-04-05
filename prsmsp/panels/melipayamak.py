@@ -28,7 +28,7 @@ class MeliPayamak(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, originator: str):
+    def send_sms(self, receptor: str, message: str, originator: str) -> Response:
         """send sms with melipayamak sms panel
 
         :param receptor: reciver of your message

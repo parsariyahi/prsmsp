@@ -9,12 +9,13 @@ from prsmsp.models import Response
 
 
 class Mediana(ABCSmsPanel):
-
     # this is the client version for mediana package
     # this is not relevant to our package version,
     # its just the version that mediana package uses.
     __client_version = "1.0.1"
-    __user_agent = f"MedianaSMS/ApiClient/{__client_version} Python/{str(sys.hexversion)}"
+    __user_agent = (
+        f"MedianaSMS/ApiClient/{__client_version} Python/{str(sys.hexversion)}"
+    )
 
     def __init__(self, api_key: str) -> None:
         """Take the auth info
@@ -58,12 +59,14 @@ class Mediana(ABCSmsPanel):
         # this is just a simple defualt header.
         # mediana require this, also they implement it in this way.
         auth_header = f"AccessKey {self.auth.api_key}"
-        headers.update({
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-            "Authorization": auth_header,
-            "User-Agent": self.__user_agent,
-        })
+        headers.update(
+            {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Authorization": auth_header,
+                "User-Agent": self.__user_agent,
+            }
+        )
 
         resp = requests.get(url, headers=headers, params=params)
 

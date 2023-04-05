@@ -25,7 +25,9 @@ class SmsDotIr(ABCSmsPanel):
 
         return Response(status_code, real_response)
 
-    def send_sms(self, receptor: str, message: str, originator: str) -> Response: # NoQA
+    def send_sms(
+        self, receptor: str, message: str, originator: str
+    ) -> Response:  # NoQA
         """send sms with smsir sms panel
 
         :param receptor: reciver of your message
