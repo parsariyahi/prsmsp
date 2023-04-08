@@ -1,29 +1,29 @@
-prsmsp.exeptions package
+prsmsp.exceptions package
 ========================
 
 Submodules
 ----------
 
-prsmsp.exeptions.abstracts module
+prsmsp.exceptions.abstracts module
 ---------------------------------
 
-.. automodule:: prsmsp.exeptions.abstracts
+.. automodule:: prsmsp.exceptions.abstracts
    :members:
    :undoc-members:
    :show-inheritance:
 
-prsmsp.exeptions.models module
+prsmsp.exceptions.models module
 ------------------------------
 
-.. automodule:: prsmsp.exeptions.models
+.. automodule:: prsmsp.exceptions.models
    :members:
    :undoc-members:
    :show-inheritance:
 
-prsmsp.exeptions.panels module
+prsmsp.exceptions.panels module
 ------------------------------
 
-.. automodule:: prsmsp.exeptions.panels
+.. automodule:: prsmsp.exceptions.panels
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ prsmsp.exeptions.panels module
 Module contents
 ---------------
 
-.. automodule:: prsmsp.exeptions
+.. automodule:: prsmsp.exceptions
    :members:
    :undoc-members:
    :show-inheritance:

@@ -8,7 +8,7 @@ Subpackages
    :maxdepth: 4
 
    prsmsp.abstracts
-   prsmsp.exeptions
+   prsmsp.exceptions
    prsmsp.factories
    prsmsp.models
    prsmsp.panels
