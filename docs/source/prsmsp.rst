@@ -7,7 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   prsmsp.abctracts
+   prsmsp.abstracts
    prsmsp.exeptions
    prsmsp.factories
    prsmsp.models

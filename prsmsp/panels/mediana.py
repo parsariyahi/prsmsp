@@ -3,7 +3,7 @@ import json
 
 import requests
 
-from prsmsp.abctracts.abcpanel import ABCSmsPanel
+from prsmsp.abstracts.abcpanel import ABCSmsPanel
 from prsmsp.factories import AuthFactory
 from prsmsp.models import Response
 

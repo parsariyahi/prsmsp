@@ -1,13 +1,13 @@
-prsmsp.abctracts package
+prsmsp.abstracts package
 ========================
 
 Submodules
 ----------
 
-prsmsp.abctracts.abcpanel module
+prsmsp.abstracts.abcpanel module
 --------------------------------
 
-.. automodule:: prsmsp.abctracts.abcpanel
+.. automodule:: prsmsp.abstracts.abcpanel
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ prsmsp.abctracts.abcpanel module
 Module contents
 ---------------
 
-.. automodule:: prsmsp.abctracts
+.. automodule:: prsmsp.abstracts
    :members:
    :undoc-members:
    :show-inheritance:

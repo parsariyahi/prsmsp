@@ -4,10 +4,10 @@ prsmsp.exeptions package
 Submodules
 ----------
 
-prsmsp.exeptions.abctracts module
+prsmsp.exeptions.abstracts module
 ---------------------------------
 
-.. automodule:: prsmsp.exeptions.abctracts
+.. automodule:: prsmsp.exeptions.abstracts
    :members:
    :undoc-members:
    :show-inheritance:
