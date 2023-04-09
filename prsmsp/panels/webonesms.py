@@ -8,7 +8,7 @@ from prsmsp.models import Response
 
 
 class WebOneSms(ABCSmsPanel):
-    def __init__(self, username, password):
+    def __init__(self, username, password) -> None:
         """Take the auth info
 
         :param username: webonesms username
@@ -22,7 +22,7 @@ class WebOneSms(ABCSmsPanel):
         """
         self.auth = AuthFactory.get("username_pass")(username, password)
 
-    def _response_parser(self, resp):
+    def _response_parser(self, resp: requests.Response) -> Response:
         status_code = int(resp.status_code)
         try:
             real_response = json.loads(resp.text)

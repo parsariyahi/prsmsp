@@ -8,7 +8,7 @@ from prsmsp.models import Response
 
 
 class SmsDotIr(ABCSmsPanel):
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str) -> None:
         """Take the auth info
 
         :param api_key: your smsir api key auth
@@ -19,7 +19,7 @@ class SmsDotIr(ABCSmsPanel):
         """
         self.auth = AuthFactory.get("api_key")(api_key)
 
-    def _response_parser(self, resp):
+    def _response_parser(self, resp: requests.Response) -> Response:
         status_code = int(resp.status_code)
         real_response = json.loads(resp.text)
 
