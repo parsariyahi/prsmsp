@@ -23,5 +23,9 @@
     "ghasedaksms": {
         "api_key": "your api key for test",
         "originator": "your originator for test"
+    },
+    "farazsms": {
+        "api_key": "your api key for test",
+        "originator": "your originator for test"
     }
 }

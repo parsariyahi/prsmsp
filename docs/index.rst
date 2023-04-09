@@ -29,6 +29,7 @@
    /panels/melipayamak
    /panels/mediana
    /panels/ghasedaksms
+   /panels/farazsms
 
 
 What is prsmsp ?

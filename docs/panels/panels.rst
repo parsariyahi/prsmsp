@@ -14,6 +14,7 @@ Supported Panels
 * melipayamak
 * mediana
 * ghasedaksms
+* farazsms
 
 
 Kavenegar
@@ -39,3 +40,7 @@ Mediana
 GhasedakSms
 -----------
 :doc:`GhasedakSms Document </panels/mediana>`
+
+FarazSms
+--------
+:doc:`FarazSms Document </panels/farazsms>`
