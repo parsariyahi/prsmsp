@@ -48,7 +48,7 @@ class FarazSms(ABCSmsPanel):
         url = "https://api2.ippanel.com/api/v1/sms/send/webservice/single"
 
         data = {
-            "receptor": receptor,
+            "receptor": [receptor],
             "message": message,
             "originator": originator,
         }
