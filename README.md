@@ -6,6 +6,7 @@
 * [Meli Payamak](https://www.melipayamak.com)
 * [Mediana](https://mediana.ir)
 * [Ghasedak Sms](https://ghasedak.me)
+* [Faraz Sms](https://farazsms.com/)
 
 ## Why use this package?
 
