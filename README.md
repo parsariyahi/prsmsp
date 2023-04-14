@@ -7,6 +7,7 @@
 * [Mediana](https://mediana.ir)
 * [Ghasedak Sms](https://ghasedak.me)
 * [Faraz Sms](https://farazsms.com/)
+* [Nik Sms](https://niksms.com/)
 
 ## Why use this package?
 
