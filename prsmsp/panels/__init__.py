@@ -5,6 +5,7 @@ from .webonesms import WebOneSms
 from .mediana import Mediana
 from .ghasedaksms import GhasedakSms
 from .farazsms import FarazSms
+from .niksms import NikSms
 
 __all__ = [
     "Kavenegar",
@@ -14,4 +15,5 @@ __all__ = [
     "Mediana",
     "GhasedakSms",
     "FarazSms",
+    "NikSms",
 ]
