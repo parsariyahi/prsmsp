@@ -30,6 +30,7 @@
    /panels/mediana
    /panels/ghasedaksms
    /panels/farazsms
+   /panels/niksms
 
 
 What is prsmsp ?

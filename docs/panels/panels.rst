@@ -44,3 +44,7 @@ GhasedakSms
 FarazSms
 --------
 :doc:`FarazSms Document </panels/farazsms>`
+
+NikSms
+------
+:doc:`NikSms Document </panels/niksms>`
