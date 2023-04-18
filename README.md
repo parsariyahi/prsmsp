@@ -21,7 +21,6 @@ this project save you time for implementing panels and for refactoring your code
 - Easy to implement and use
 
 <br>
-<br>
 
 # Supported panels
 
@@ -34,7 +33,6 @@ this project save you time for implementing panels and for refactoring your code
 * [Faraz Sms](https://farazsms.com/)
 * [Nik Sms](https://niksms.com/)
 
-<br>
 <br>
 
 # How to use?
@@ -59,7 +57,7 @@ panel.send_sms(receptor, msg)
 ```
 
 #### [Docs](https://prsmsp.readthedocs.io/en/latest/panels/panels.html)
-<br>
+
 <br>
 
 # How to support this project?
