@@ -32,5 +32,8 @@
         "username": "your username for test",
         "password": "your password for test",
         "originator": "your originator for test"
+    },
+    "smsone": {
+        "api_key": "your token for test"
     }
 }
