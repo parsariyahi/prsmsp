@@ -48,3 +48,7 @@ FarazSms
 NikSms
 ------
 :doc:`NikSms Document </panels/niksms>`
+
+Sms1
+----
+:doc:`Sms1 Document </panels/smsone>`

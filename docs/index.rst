@@ -31,6 +31,7 @@
    /panels/ghasedaksms
    /panels/farazsms
    /panels/niksms
+   /panels/smsone
 
 
 What is prsmsp ?
