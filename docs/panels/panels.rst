@@ -52,3 +52,7 @@ NikSms
 Sms1
 ----
 :doc:`Sms1 Document </panels/smsone>`
+
+Sapak
+-----
+:doc:`Sapak Document </panels/sapak>`
