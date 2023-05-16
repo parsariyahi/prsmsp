@@ -32,6 +32,7 @@
    /panels/farazsms
    /panels/niksms
    /panels/smsone
+   /panels/sapak
 
 
 What is prsmsp ?

@@ -35,5 +35,9 @@
     },
     "smsone": {
         "api_key": "your token for test"
+    },
+    "sapak": {
+        "api_key": "your api key for test",
+        "originator": "your originator for test"
     }
 }
