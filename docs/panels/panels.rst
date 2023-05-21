@@ -15,6 +15,10 @@ Supported Panels
 * mediana
 * ghasedaksms
 * farazsms
+* niksms
+* sms1
+* sapak
+
 
 
 Kavenegar
