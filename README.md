@@ -49,10 +49,10 @@ This block of code is for **kavenegar** sms panel.
 Each of sms panels has its own parameters. Please read their docs first.
 
 ```python
-from prsmsp.panels import Kavenegar
+from prsmsp import Panel
 
 api_key = "your api key"
-panel = Kavenegar(api_key)  # auth
+panel = Panel.initiate("kavenegar", api_key=api_key)  # auth
 
 receptor = "your receptor"
 msg = "your message"
