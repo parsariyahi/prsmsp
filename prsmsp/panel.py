@@ -20,7 +20,6 @@ class PanelFactory:
         }
 
         p = PANELS.get(panel_name, None)
-        print(p)
         if p:
             return p
 
