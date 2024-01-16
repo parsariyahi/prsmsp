@@ -1,9 +1,10 @@
+from prsmsp.abstracts.abcpanel import ABCSmsPanel
 from prsmsp.panels import *
 
 class PanelFactory:
 
     @staticmethod
-    def get(panel_name: str):
+    def get(panel_name: str) -> ABCSmsPanel:
 
         PANELS = {
             "kavenegar": Kavenegar,
@@ -29,7 +30,11 @@ class PanelFactory:
 class Panel:
 
     staticmethod
-    def initiate(panel_name: str, **auth):
-        p = PanelFactory.get(panel_name)
+    def initiate(panel_name: str, **auth) -> ABCSmsPanel:
+        if ("username" in auth and "password" in auth) \
+        or ("api_key" in auth):
+            p = PanelFactory.get(panel_name)
 
-        return p(*auth.values())
+            return p(*auth.values())
+        else:
+            raise Exception("Authentication Info must be (username='', password='') or (api_key='')")
